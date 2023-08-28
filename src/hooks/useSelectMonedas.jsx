@@ -1,14 +1,25 @@
 import styled from "@emotion/styled"
 
-const Labels = styled.label `
+const Label = styled.label `
   color: #fff;
 `
 
-const useSelectMonedas = (label) => {
+const useSelectMonedas = (label, opciones) => {
 
   const SelectMonedas = () =>  (
     <>
-      <Labels>{label}</Labels>
+      <Label>{label}</Label>
+
+      <select>
+        <option> Selecciones </option>
+
+        {opciones.map( opcion => (
+          <option key={opcion.id} value={opcion.id}> 
+            {opcion.nombre}
+          </option>
+        ))}
+
+      </select>
     </>
   )
 
