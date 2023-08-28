@@ -14,7 +14,7 @@ const InputSubmit = styled.input `
     font-size: 20px;
     border-radius: 5px;
     transition: background-color .3s;
-    margin-top:30px;
+    margin-top:20px;
 
     &:hover {
         background-color: #7a7dfe;
@@ -24,9 +24,10 @@ const InputSubmit = styled.input `
 
 const Formulario = () => {
 
-    const[criptos, setCriptos] = useState
+    const[criptos, setCriptos] = useState([])
 
     const [ moneda , SelectMonedas] = useSelectMonedas('Elige tu moneda', monedas)
+    const [ criptomoneda , SelectCriptomoneda] = useSelectMonedas('Elige tu Criptomoneda', criptos)
 
     useEffect(() => {
         const consultarApi = async()  =>{
@@ -42,13 +43,15 @@ const Formulario = () => {
                 }
                 return objeto
             })
+            setCriptos(ArrayCriptos)
         }
         consultarApi();
     },[])
 
     return (
         <div>
-            <SelectMonedas/> {moneda}
+            <SelectMonedas/>
+            <SelectCriptomoneda/>
             <InputSubmit type="submit" value='Cotizar' />
         </div>
     )
