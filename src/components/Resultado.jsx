@@ -7,22 +7,22 @@ const Contenedor = styled.div`
 `
 
 const Precio = styled.p`
- font-size:25px;
-    span{
-        font-weight:700;
-    }
+    font-size:25px;
+        span{
+            font-weight:700;
+        }
 `
 
 const Texto = styled.p`
- font-size:15px;
-    span{
-        font-weight:700;
-    }
+    font-size:15px;
+        span{
+            font-weight:700;
+        }
 `
 
 const Resultado = ({resultado}) => {
 
-    const {PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, IMAGEURL, LASTUPDATE} = resultado
+    const {PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE} = resultado
 
     return (
         <Contenedor>
