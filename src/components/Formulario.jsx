@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import useSelectMonedas from "../hooks/useSelectMonedas"
-import {monedas} from '../data/monedas'
+import { monedas } from "../data/moneda"
 
 const InputSubmit = styled.input `
     background-color: #9497ff;
