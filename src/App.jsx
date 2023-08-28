@@ -43,6 +43,7 @@ const Heading = styled.h1 `
 function App() {
 
   const[monedas, setMonedas] = useState({})
+  const[resultado, setResultado] = useState({})
 
   useEffect(() => {
     if(Object.keys(monedas).length > 0) {
@@ -52,7 +53,7 @@ function App() {
         const respuesta = await fetch(url)
         const resultado = await respuesta.json()
 
-        console.log(resultado);
+        setResultado(resultado.DISPLAY[moneda][criptomoneda]);
       }
       cotizarCripto();
     }
