@@ -39,6 +39,7 @@ const Formulario = () => {
             setError(true);
             return
         }
+        setError(false);
     }
 
     useEffect(() => {
