@@ -3,7 +3,6 @@ import styled from "@emotion/styled"
 const Contenedor = styled.div`
     color:#FFFFFF;
     font-family:'Lato', sans-serif;
-
 `
 
 const Precio = styled.p`
